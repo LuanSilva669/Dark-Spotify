@@ -1,19 +1,19 @@
-"user client"
+"use client";
 
-import { MyUserContextProvider } from "@/hooks/useUser"
+import { MyUserContextProvider } from "@/hooks/useUser";
 
-interface  MyUserContextProvider {
-    children: React.ReactNode;
-};
+interface UserProviderProps {
+  children: React.ReactNode;
+}
 
 const UserProvider: React.FC<UserProviderProps> = ({
-    children
+  children
 }) => {
-    return (
-        <MyUserContextProvider>
-            {children}
-        </MyUserContextProvider>
-    )
-};
-
+  return ( 
+    <MyUserContextProvider>
+      {children}
+    </MyUserContextProvider>
+   );
+}
+ 
 export default UserProvider;
